@@ -46,16 +46,21 @@ class EmployeeData extends React.Component {
                 }
             })
           } 
-          validUsers.push({
-            id: user.id,
-            fullName: user.name.formatted,
-            avatar: user.resources.avatar,
-            email: email,
-            title: title,
-            department: department,
-            phone:phonenumber
-          })
+          if(user.jive.enabled === true)
+          {
+            validUsers.push({
+                id: user.id,
+                fullName: user.name.formatted,
+                avatar: user.resources.avatar,
+                email: email,
+                title: title,
+                department: department,
+                phone:phonenumber
+            })
+        }
         })
+    
+        
         this.setState({employees: validUsers});
         this.setState({statusMessage: ''});
     }
@@ -65,7 +70,7 @@ class EmployeeData extends React.Component {
         let concludeApi = this.concludeApi.bind(this)
         var allUsers = previousRequestList || [];
 
-        var nextLink = nextRequest || '/people/?fields=name,emails,jive.profile.Title,jive.profile.Department,resources.avatar,phoneNumbers&count=100';
+        var nextLink = nextRequest || '/people/?fields=name,emails,jive,resources.avatar,phoneNumbers&count=100';
         var param = {
         v: 'v3',
         href: nextLink
