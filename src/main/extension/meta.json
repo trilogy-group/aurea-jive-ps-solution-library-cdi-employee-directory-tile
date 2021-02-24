@@ -1,0 +1,16 @@
+{
+  "package_version": "1.0",
+  "id": "1932d541-9bf6-44ee-8046-0197c24110bd",
+  "type": "client-app",
+  "name": "Employee Directory",
+  "description": "Employee Directory tile",
+  "icon_16": "extension-16.png",
+  "icon_48": "extension-48.png",
+  "icon_128": "extension-128.png",
+  "released_on": "2013-03-08T19:11:11.234Z",
+  "register_url": "http:",
+  "unregister_url": "http:",
+  "service_url": "http:",
+  "version": "${project.version}",
+  "minimum_version": "0090200000"
+}

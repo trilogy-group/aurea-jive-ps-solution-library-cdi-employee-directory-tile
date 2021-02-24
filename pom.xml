@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.jivesoftware.solutionlibrary</groupId>
+  <artifactId>cdi-employee-directory-tile</artifactId>
+  <name>cdi-employee-directory-tile</name>
+  <version>1.0.0</version>
+
+  <parent>
+   	<groupId>com.jivesoftware.ps.service.maddon</groupId>
+   	<artifactId>parent</artifactId>
+   	<version>3.0.1</version>
+  </parent>
+
+  <scm>
+  <connection>scm:git:ssh://git@github.com:trilogy-group/aurea-jive-ps-solution-library-sharpoint-files.git</connection>
+  <developerConnection>scm:git:git@github.com:trilogy-group/aurea-jive-ps-solution-library-sharpoint-files.git</developerConnection>
+  <url>https://github.com/trilogy-group/aurea-jive-ps-solution-library-sharpoint-files</url>
+  <tag>HEAD</tag>
+  </scm>
+
+  <properties>
+    <maddon.extension.descriptor>jive-hosted-extension</maddon.extension.descriptor>
+    <maddon.extension.validator.args>--tenancy --ignore 40901</maddon.extension.validator.args>
+    <maddon.assets.node.version>v8.8.1</maddon.assets.node.version>
+    <maddon.assets.npm.version>5.4.2</maddon.assets.npm.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>assemble-docker-artifact</id>
+            <configuration>
+              <skipAssembly>true</skipAssembly>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

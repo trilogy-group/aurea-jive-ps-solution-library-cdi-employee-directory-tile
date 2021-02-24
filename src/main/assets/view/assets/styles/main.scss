@@ -1,0 +1,155 @@
+/**
+ * This is the core/primary stylesheet for the view, all other stylesheets are pulled in by this one.
+ */
+
+/* base */
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/mixins';
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/colors';
+//@import '../../../../../../../common/assets/styles/base/colors'; // overwrite default colors
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/fonts';
+//@import '../../../../../../../common/assets/styles/base/fonts'; // overwrite default fonts
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/base';
+//@import '../../../../../../../common/assets/styles/base/base'; // overwrite base styles
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/helpers';
+
+/* tile specific */
+
+
+.cdi-container{
+  max-width: 600px;
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+/* ITEM LIST */
+#cdi-main-list{
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 400px;
+}
+.cdi-item{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  color: #444444;
+  text-decoration: none;
+  transition: all .2s ease;
+  border-width: 0;
+  border-bottom: solid 1px;
+  background: #FAFAFA;
+  border-image: linear-gradient(90deg, #EFEFEF, #D0D0D0, #D0D0D0, #EFEFEF) 0 100%;
+  border-image-slice: 1;
+  padding-left: 8px;
+}
+.cdi-item:hover{
+  text-decoration: none;
+  color: #444444
+}
+.cdi-item.itm-hide{
+  display: none;
+}
+.cdi-item:hover{
+  padding-left: 5px;
+  background: #F5F5F9;
+}
+.cdi-item .cdi-item-icon{
+  padding: 5px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+}
+.cdi-item .cdi-item-name{
+  font-size: 1.3em;
+  padding: 5px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.show-only-filtered  .cdi-item{
+  display: none;
+}
+.show-only-filtered .cdi-item.search-result{
+  display: flex;
+}
+/* SEARCH BAR */
+.cdi-search{
+  width: 100%;
+  border-width: 0;
+  border-bottom: solid 1px;
+  border-image: linear-gradient(90deg, #DFDFDF, #D0D0D0, #D0D0D0, #DFDFDF) 0 100%;
+  border-image-slice: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.cdi-search.hide-search-bar{
+  display: none;
+}
+.cdi-search #file-search-input{
+  height: 26px;
+  margin: 5px;
+  font-size: 1.5em;
+  background: #e1dfdd;
+  width: 95%;
+  border: 0;
+  border-radius: 2px;
+}
+.cdi-search #file-search-input:focus{
+  background: white;
+}
+.search-icon-float{
+  color: #CCC;
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  padding: 4px;
+  margin-left: -10px;
+  background: #e1dfdd;
+  border-radius: 2px;
+}
+/* TITLE */
+.cdi-title{
+  font-weight: 400;
+  padding-top: 5px;
+  font-size: 1.7em;
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 0px;
+}
+/* LOADING MESSAGE */
+.cdi-loading-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+/* SCROLL BAR */
+#cdi-main-list::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #DFDFDF;
+  border-radius: 10px;
+}
+#cdi-main-list::-webkit-scrollbar
+{
+	width: 12px;
+  border-radius: 10px;
+	background-color: #DFDFDF;
+}
+#cdi-main-list::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #A8A8A8;
+}
+#cdi-main-list{
+  scrollbar-width: thin;
+  scrollbar-color: #A8A8A8 #DFDFDF;
+}
+
+

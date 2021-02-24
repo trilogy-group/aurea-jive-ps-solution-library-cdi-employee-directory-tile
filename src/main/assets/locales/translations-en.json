@@ -1,0 +1,22 @@
+{
+  "view": {
+    "header": "View page"
+  },
+  "config": {
+    "description": "Please configure the following settings for this tile:",
+    "form": {
+      "fields": {
+        "customTitle": {
+          "label": "Title"
+        },
+        "showTitle": {
+          "label": "Display tile title?"
+        },
+        "required": {
+          "label": "Required label",
+          "error": "This field is required"
+        }
+      }
+    }
+  }
+}

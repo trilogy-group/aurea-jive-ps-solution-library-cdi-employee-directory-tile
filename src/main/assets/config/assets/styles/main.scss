@@ -1,0 +1,26 @@
+/**
+ * This is the core/primary stylesheet for the config, all other stylesheets are pulled in by this one.
+ */
+
+/* base */
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/mixins';
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/colors';
+//@import '../../../../../../../common/assets/styles/base/colors'; // overwrite default colors
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/fonts';
+//@import '../../../../../../../common/assets/styles/base/fonts'; // overwrite default fonts
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/base';
+//@import '../../../../../../../common/assets/styles/base/base'; // overwrite base styles
+@import '~ps-solution-library-ui-common/ui/assets/styles/base/helpers';
+
+/* ui */
+@import '~ps-solution-library-ui-common/ui/assets/styles/ui/icons';
+@import '~ps-solution-library-ui-common/ui/assets/styles/ui/layout';
+
+/* config */
+@import '~ps-solution-library-ui-common/ui/assets/styles/config/headings';
+@import '~ps-solution-library-ui-common/ui/assets/styles/config/helpers';
+@import '~ps-solution-library-ui-common/ui/assets/styles/config/layout';
+@import '~ps-solution-library-ui-common/ui/assets/styles/config/forms';
+@import '~ps-solution-library-ui-common/ui/assets/styles/config/footer';
+
+/* tile specific */
